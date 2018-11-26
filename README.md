@@ -29,4 +29,4 @@
 基于Netflix Eureka做了二次封装
 包括两个部分：
  * Rureka Server 注册中心，[localhost:8761, localhost:8762]
- * Rureka Client 注册服务，product(localhost:8080)是商品服务，order(localhost:8081)是订单服务
+ * Rureka Client 注册服务，**product**(localhost:8080)是商品服务，**order**(localhost:8081)是订单服务
