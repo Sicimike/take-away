@@ -9,6 +9,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * @Author sicimike
+ */
 @Service
 public class ProductServiceImpl implements ProductService {
 
@@ -18,5 +21,10 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<ProductInfo> findUpAll() {
         return productInfoRepository.findByProductStatus(EnumProductStatus.UP.getCode());
+    }
+
+    @Override
+    public List<ProductInfo> findList(List<String> productIdList) {
+        return productInfoRepository.findByProductIdIn(productIdList);
     }
 }

@@ -10,12 +10,17 @@ import com.sicimike.product.vo.ResultVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * @Author sicimike
+ */
 @RestController
 public class ProductController {
 
@@ -58,5 +63,16 @@ public class ProductController {
         }
 
         return ResultVO.success(productVOList);
+    }
+
+    /**
+     * 获取商品列表
+     * @param productIdList
+     * @return
+     */
+    @PostMapping("/product/listForOrder")
+    public List<ProductInfo> listForOrder(@RequestBody List<String> productIdList){
+
+        return productService.findList(productIdList);
     }
 }

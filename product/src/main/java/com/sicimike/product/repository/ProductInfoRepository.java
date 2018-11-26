@@ -5,6 +5,9 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
+/**
+ * @Author sicimike
+ */
 public interface ProductInfoRepository extends CrudRepository<ProductInfo, String>{
 
     /**
@@ -13,4 +16,11 @@ public interface ProductInfoRepository extends CrudRepository<ProductInfo, Strin
      * @return
      */
     List<ProductInfo> findByProductStatus(Integer status);
+
+    /**
+     * 根据商品id列表查询
+     * @param productIdList
+     * @return
+     */
+    List<ProductInfo> findByProductIdIn(List<String> productIdList);
 }
