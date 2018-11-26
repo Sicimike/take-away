@@ -3,6 +3,7 @@ package com.sicimike.order.controller;
 import com.alibaba.fastjson.JSON;
 import com.sicimike.order.client.ProductClient;
 import com.sicimike.order.converter.OrderForm2OrderDtoConverter;
+import com.sicimike.order.dto.CartDTO;
 import com.sicimike.order.dto.OrderDTO;
 import com.sicimike.order.entity.ProductInfo;
 import com.sicimike.order.enums.EnumResult;
@@ -70,6 +71,12 @@ public class OrderController {
     public String getProductList(){
         List<ProductInfo> list = productClient.listForOrder(Arrays.asList("157875196366160022","164103465734242707"));
         log.info(JSON.toJSONString(list));
+        return "OK";
+    }
+
+    @GetMapping("/order/productDecreaseStock")
+    public String productDecreaseStock(){
+        productClient.decreaseStock(Arrays.asList(new CartDTO("157875196366160022", 2)));
         return "OK";
     }
 

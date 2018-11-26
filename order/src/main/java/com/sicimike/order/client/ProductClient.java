@@ -1,5 +1,6 @@
 package com.sicimike.order.client;
 
+import com.sicimike.order.dto.CartDTO;
 import com.sicimike.order.entity.ProductInfo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,5 +16,8 @@ import java.util.List;
 public interface ProductClient {
 
     @PostMapping("/product/listForOrder")
-    public List<ProductInfo> listForOrder(@RequestBody List<String> productIdList);
+    List<ProductInfo> listForOrder(@RequestBody List<String> productIdList);
+
+    @PostMapping("/product/decreaseStock")
+    void decreaseStock(@RequestBody List<CartDTO> cartDTOList);
 }
