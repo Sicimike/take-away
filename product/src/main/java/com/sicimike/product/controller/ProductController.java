@@ -1,5 +1,6 @@
 package com.sicimike.product.controller;
 
+import com.sicimike.product.dto.CartDTO;
 import com.sicimike.product.entity.ProductCategory;
 import com.sicimike.product.entity.ProductInfo;
 import com.sicimike.product.service.CategoryService;
@@ -74,5 +75,10 @@ public class ProductController {
     public List<ProductInfo> listForOrder(@RequestBody List<String> productIdList){
 
         return productService.findList(productIdList);
+    }
+
+    @PostMapping("/product/decreaseStock")
+    public void decreaseStock(@RequestBody List<CartDTO> cartDTOList){
+        productService.decreaseStock(cartDTOList);
     }
 }

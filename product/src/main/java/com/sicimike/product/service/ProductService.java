@@ -1,9 +1,13 @@
 package com.sicimike.product.service;
 
+import com.sicimike.product.dto.CartDTO;
 import com.sicimike.product.entity.ProductInfo;
 
 import java.util.List;
 
+/**
+ * @Author sicimike
+ */
 public interface ProductService {
 
     /**
@@ -18,4 +22,6 @@ public interface ProductService {
      * @return
      */
     List<ProductInfo> findList(List<String> productIdList);
+
+    void decreaseStock(List<CartDTO> cartDTOList);
 }
