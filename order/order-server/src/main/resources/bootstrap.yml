@@ -7,3 +7,5 @@ spring:
         enabled: true
         service-id: CONFIG-SERVER
       profile: dev
+  rabbitmq:
+    host: 172.16.24.100

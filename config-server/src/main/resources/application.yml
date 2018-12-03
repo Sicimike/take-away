@@ -13,5 +13,13 @@ spring:
           uri: https://github.com/Sicimike/take-away.git
           search-paths: config-repository
           username: Sicimike
-          password: 
+          password:
+          force-pull: true
           basedir: C:\workspace_idea\take-away\config-server\basedir
+  rabbitmq:
+    host: 172.16.24.100
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

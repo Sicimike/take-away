@@ -32,6 +32,8 @@
  * Eureka Client 注册服务，**product**(localhost:8080)是商品服务，**order**(localhost:8081)是订单服务  
 两个server相互注册，client同时在两个server上注册即可实现高可用
 
+### Spring Cloud OpenFeign
+
 ### Spring Cloud Config
 配置中心，会从远端git拉取配置文件到本地git仓库
 * Config Server 配置文件服务，[localhost:9761, localhost:9762]
