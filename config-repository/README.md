@@ -11,5 +11,5 @@ config-server访问git仓库时需添加如下配置：
 `http://ip:port/{name}-{profiles}.yml`  
 `http://ip:port/{label}/{name}-{profiles}.yml`  
 * name 服务名
-* profiles 环境
+* profiles 环境[test, dev]，未指定时用a、b...代替
 * label 分支(branch)，缺省时是master分支
