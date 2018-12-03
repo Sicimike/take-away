@@ -28,5 +28,11 @@
 ### Spring Cloud Eureka
 基于Netflix Eureka做了二次封装
 包括两个部分：
- * Rureka Server 注册中心，[localhost:8761, localhost:8762]
- * Rureka Client 注册服务，**product**(localhost:8080)是商品服务，**order**(localhost:8081)是订单服务
+ * Eureka Server 注册中心，[localhost:8761, localhost:8762]
+ * Eureka Client 注册服务，**product**(localhost:8080)是商品服务，**order**(localhost:8081)是订单服务  
+两个server相互注册，client同时在两个server上注册即可实现高可用
+
+### Spring Cloud Config
+配置中心，会从远端git拉取配置文件到本地git仓库
+* Config Server 配置文件服务，[localhost:9761, localhost:9762]
+config无需任何配置，在eureka server上注册、启动多个实例即可实现高可用

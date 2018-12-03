@@ -5,3 +5,13 @@ eureka:
 spring:
   application:
     name: config-server
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/Sicimike/take-away.git
+          search-paths: config-repository
+          username: Sicimike
+          password: 
+          basedir: C:\workspace_idea\take-away\config-server\basedir
