@@ -1,0 +1,13 @@
+zuul:
+  routes:
+    sicimike:  #自定义变量
+      path: /sicimike/**  #context
+      serviceId: product
+      sensitiveHeaders:   #不过滤敏感头信息
+  ignored-patterns:  #隐藏接口，外部无法访问
+    - /**/product/listForOrder
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #暴露所有接口

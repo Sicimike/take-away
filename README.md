@@ -32,6 +32,7 @@
 	* Config
 	* Bus
 	* Stream
+	* Zuul
 * Docker-18.05.0-ce
 * RabbitMQ:3.7.3
 * Redis:4.0.8
