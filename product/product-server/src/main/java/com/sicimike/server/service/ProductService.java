@@ -1,6 +1,6 @@
 package com.sicimike.server.service;
 
-import com.sicimike.server.dto.CartDTO;
+import com.sicimike.product.common.DecreaseStockInput;
 import com.sicimike.server.entity.ProductInfo;
 
 import java.util.List;
@@ -23,5 +23,5 @@ public interface ProductService {
      */
     List<ProductInfo> findList(List<String> productIdList);
 
-    void decreaseStock(List<CartDTO> cartDTOList);
+    void decreaseStock(List<DecreaseStockInput> decreaseStockInputList);
 }

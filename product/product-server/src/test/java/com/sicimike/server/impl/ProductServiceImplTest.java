@@ -1,5 +1,6 @@
 package com.sicimike.server.impl;
 
+import com.sicimike.product.common.DecreaseStockInput;
 import com.sicimike.server.ProductServerApplicationTests;
 import com.sicimike.server.dto.CartDTO;
 import com.sicimike.server.entity.ProductInfo;
@@ -26,8 +27,8 @@ public class ProductServiceImplTest extends ProductServerApplicationTests {
 
     @Test
     public void decreaseStock() throws Exception{
-        CartDTO cartDTO = new CartDTO("164103465734242707",2);
-        productService.decreaseStock(Arrays.asList(cartDTO));
+        DecreaseStockInput decreaseStockInput = new DecreaseStockInput("164103465734242707",2);
+        productService.decreaseStock(Arrays.asList(decreaseStockInput));
     }
 
 }

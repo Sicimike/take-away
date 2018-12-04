@@ -24,6 +24,18 @@
 * 不共享主内存
 * 通过网络通信，http RESTful、RPC
 
+### 技术栈
+* spring-boot-2.0.2.RELEASE
+* spring-cloud-Finchley.RELEASE
+	* Eureka
+	* OpenFeign
+	* Config
+	* Bus
+	* Stream
+* Docker-18.05.0-ce
+* RabbitMQ:3.7.3
+* Redis:4.0.8
+
 ## Spring Cloud组件
 ### Spring Cloud Eureka
 基于Netflix Eureka做了二次封装
