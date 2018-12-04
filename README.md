@@ -37,4 +37,11 @@
 ### Spring Cloud Config
 配置中心，会从远端git拉取配置文件到本地git仓库
 * Config Server 配置文件服务，[localhost:9761, localhost:9762]
-config无需任何配置，在eureka server上注册、启动多个实例即可实现高可用
+config无需任何配置，在eureka server上注册、启动多个实例即可实现高可用  
+
+### Spring Cloud Bus
+消息总线结合RabbitMQ、Webhooks实现配置自动刷新
+1. 把config server服务localhost:9761映射到外网`http://sicimike.ngrok.xiaomiqiu.cn`(可利用内外穿透工具)
+2. 添加pom.xml文件添加两个依赖: `spring-cloud-starter-bus-amqp`和`spring-cloud-config-monitor`
+3. 配置文件中添加`management.endpoints.web.exposure.include=*`
+4. 登录github，进入`https://github.com/{username}/{project-name}`，找到Settings->Webhooks添加`http://sicimike.ngrok.xiaomiqiu.cn/monitor`
