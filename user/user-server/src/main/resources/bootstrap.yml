@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: user
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER
+      profile: dev
+  jpa:
+    show-sql: true
+  redis:
+    host: 172.16.24.100
+    port: 6379
