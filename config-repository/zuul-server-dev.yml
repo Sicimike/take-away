@@ -1,9 +1,10 @@
 zuul:
+  sensitive-headers:  #所有服务都不过滤请求头（都可以传递cookie）
   routes:
     sicimike:  #自定义变量
       path: /sicimike/**  #context
       serviceId: product
-      sensitiveHeaders:   #不过滤敏感头信息
+     # sensitiveHeaders:   #当前路由下的服务都不过滤请求头（都可以传递cookie）
   ignored-patterns:  #隐藏接口，外部无法访问
     - /**/product/listForOrder
 management:

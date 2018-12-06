@@ -58,3 +58,6 @@ config无需任何配置，在eureka server上注册、启动多个实例即可�
 2. 添加pom.xml文件添加两个依赖: `spring-cloud-starter-bus-amqp`和`spring-cloud-config-monitor`
 3. 配置文件中添加`management.endpoints.web.exposure.include=*`
 4. 登录github，进入`https://github.com/{username}/{project-name}`，找到Settings->Webhooks添加`http://sicimike.ngrok.xiaomiqiu.cn/monitor`
+
+### Spring Cloud Zuul
+服务网关：前置过滤器、后置过滤器、限流等
