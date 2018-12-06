@@ -35,6 +35,9 @@ public class AuthFilter extends ZuulFilter {
     public Object run() throws ZuulException {
         RequestContext requestContext = RequestContext.getCurrentContext();
         HttpServletRequest request = requestContext.getRequest();
+        /**
+         * TODO
+         */
         return null;
     }
 }
