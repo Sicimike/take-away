@@ -33,6 +33,7 @@
 	* Bus
 	* Stream
 	* Zuul
+	* Hystrix
 	* Sleuth
 * Docker-18.05.0-ce
 * RabbitMQ:3.7.3
