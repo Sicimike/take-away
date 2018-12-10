@@ -38,6 +38,9 @@
 * Redis:4.0.8
 * Rancher
 
+### 系统架构图
+![系统架构](https://github.com/Sicimike/take-away/raw/master/images/system.jpg)
+
 ## 项目使用到的Spring Cloud组件
 ### Spring Cloud Eureka
 基于Netflix Eureka做了二次封装
