@@ -36,8 +36,9 @@
 * Docker-18.05.0-ce
 * RabbitMQ:3.7.3
 * Redis:4.0.8
+* Rancher
 
-## Spring Cloud组件
+## 项目使用到的Spring Cloud组件
 ### Spring Cloud Eureka
 基于Netflix Eureka做了二次封装
 包括两个部分：
@@ -46,6 +47,7 @@
 两个server相互注册，client同时在两个server上注册即可实现高可用
 
 ### Spring Cloud OpenFeign
+服务调用
 
 ### Spring Cloud Config
 配置中心，会从远端git拉取配置文件到本地git仓库
@@ -61,3 +63,10 @@ config无需任何配置，在eureka server上注册、启动多个实例即可�
 
 ### Spring Cloud Zuul
 服务网关：前置过滤器、后置过滤器、限流等
+
+### Spring Cloud Hystrix
+断路开关：服务降级、容错等
+
+### Spring Cloud Sleuth
+链路监控：服务跟踪
+zipkin：链路监控可视化界面

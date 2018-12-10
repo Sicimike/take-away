@@ -20,3 +20,26 @@ spring:
   redis:
     host: 172.16.24.100
     port: 6379
+  zipkin: # 请求链路信息发送到外部服务
+    base-url: http://172.16.24.101:9411/
+  sleuth: #按比例抽样发送到外部服务[0.0,1.0]
+    sampler:
+      probability: 1
+
+hystrix:
+  command:
+    default:  #为所有服务设置超时，属性来源：HystrixCommandProperties.java
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
+    getProductInfoList:  #为getProductInfoList设置超时，属性来源：HystrixCommandProperties.java
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
+logging:
+  level:
+    org.springframework.cloud.openfeign: debug
+
+
